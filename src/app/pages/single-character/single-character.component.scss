@@ -1,0 +1,58 @@
+@import '../../../styles.scss';
+
+.single-character-container {
+  color: white;
+
+  .character-img {
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.2);
+  }
+
+  .character-name {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .character-info {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+
+    strong {
+      color: orange;
+    }
+  }
+
+  .custom-btn {
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  color: black;
+  transition: color 0.3s ease;
+  font-weight: 800;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background-color: $second-color-tx;
+    z-index: -1;
+    transition: width 0.5s ease;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+
+  &:hover {
+    color: white;
+  }
+
+  position: relative;
+  z-index: 3;
+}
+  }

@@ -1,10 +1,28 @@
-<div>
+<div class="single-character-container container py-5">
 
-<img [src]="character.image" class="card-img-top" alt="{{ character.name }}">
-  <div class="card-body">
-    <h5 class="card-title">{{ character.name }}</h5>
-    <p class="card-text">{{ character.status }} - {{ character.species }}</p>
+  <div class="row align-items-center flex-column flex-md-row">
+
+    <!-- IMMAGINE -->
+    <div class="col-12 col-md-5 text-center mb-4 mb-md-0">
+      <img [src]="character.image" [alt]="character.name" class="character-img img-fluid rounded">
+    </div>
+
+    <!-- INFO -->
+    <div class="col-12 col-md-7">
+      <h2 class="character-name">{{ character.name }}</h2>
+      <p class="character-info">
+        <strong>Status:</strong> {{ character.status }}
+      </p>
+      <p class="character-info">
+        <strong>Species:</strong> {{ character.species }}
+      </p>
+      <p class="character-info">
+        <strong>Gender:</strong> {{ character.gender }}
+      </p>
+
+      <button [routerLink]="'/'" class="btn custom-btn mt-4">Back to Home</button>
+    </div>
+
   </div>
 
-  <button [routerLink]="'/'"> Back to home</button>
 </div>
