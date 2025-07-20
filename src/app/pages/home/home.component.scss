@@ -1,24 +1,32 @@
 @import '../../../styles.scss';
 
-.hero{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.hero {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 
-  height: 180px;
+  .text-hero {
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+  }
 
-  color: white;
+  @media (max-width: 768px) {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 
+    .text-hero {
+      font-size: 2.5rem;
+    }
+  }
 }
 
 .text-hero{
   font-size: 100px;
 }
 
-
-
 .arrow-btn {
-  font-size: 2rem; // rende la freccia spessa/visibile
+  font-size: 2rem;
   color: orange;
   background: none;
   border: none;
@@ -42,7 +50,6 @@
 }
 
 
-// Per gli allert
 .custom-alert {
   position: fixed;
   top: 150px;
@@ -79,3 +86,6 @@
     transform: translateX(-50%) translateY(0);
   }
 }
+
+
+
