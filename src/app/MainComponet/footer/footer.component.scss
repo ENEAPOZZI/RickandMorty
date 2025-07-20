@@ -1,0 +1,24 @@
+@import '../../../styles.scss';
+
+.app-footer {
+  color: $second-color-tx;
+
+  .nav-link {
+    color: $second-color-tx;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: lighten($second-color-tx, 10%);
+      text-decoration: underline;
+    }
+  }
+
+  .border-bottom {
+    border-color: rgba(255, 165, 0, 0.3) !important;
+  }
+
+  .copyright {
+    color: lighten($second-color-tx, 20%);
+    font-size: 0.9rem;
+  }
+}

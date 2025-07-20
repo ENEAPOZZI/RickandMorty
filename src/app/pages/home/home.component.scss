@@ -1,0 +1,81 @@
+@import '../../../styles.scss';
+
+.hero{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 180px;
+
+  color: white;
+
+}
+
+.text-hero{
+  font-size: 100px;
+}
+
+
+
+.arrow-btn {
+  font-size: 2rem; // rende la freccia spessa/visibile
+  color: orange;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 1rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+
+  &:hover:not(:disabled) {
+    color: darkorange;
+    transform: scale(1.2);
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+
+.custom-pagination {
+  margin-top: 1rem;
+}
+
+
+// Per gli allert
+.custom-alert {
+  position: fixed;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $second-color-bck;
+  border: 3px solid $second-color-tx;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  z-index: 9999;
+  font-size: 1rem;
+  font-weight: bold;
+  min-width: 300px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  animation: fadeIn 0.4s ease;
+}
+
+.custom-alert.error {
+  color: red;
+}
+
+.custom-alert.success {
+  color: limegreen;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}

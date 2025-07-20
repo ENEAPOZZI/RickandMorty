@@ -1,0 +1,36 @@
+
+@import '../../../styles.scss';
+
+
+.navbar-brand {
+  color:$second-color-tx;
+  font-size:25px;
+  font-weight: bold;
+}
+
+
+.navbar-expand-lg .navbar-collapse {justify-content: flex-end !important;}
+
+.navbar-toggler{background-color: $second-color-tx;}
+
+
+.nav-item{
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.nav-link{text-align: center;}
+.nav-link:hover{color: $second-color-tx;}
+
+
+
+.custom-collapse {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease-in-out;
+}
+
+.custom-collapse.show {
+  max-height: 500px; // abbastanza alto per mostrare il contenuto
+}
+

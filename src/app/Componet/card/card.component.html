@@ -1,0 +1,33 @@
+<div class="card horizontal-card p-2">
+
+  <div class="img-card-container">
+    <img [src]="character.image" class="card-img" alt="{{ character.name }}">
+  </div>
+
+  <div class="card-body content-side">
+
+    <h5 class="card-title">{{ character.name }}</h5>
+
+    <p class="card-text">{{ character.status }} - {{ character.species }} - {{ character.gender }}</p>
+
+
+
+    <div class="button-card-conatiner">
+
+      <button class="custom-btn" (click)="AddPref(character)" *ngIf="showButtonAdd" [class.disabled]="isad" [disabled]="isad">
+        Preferiti
+      </button>
+
+      <button class="custom-btn" (click)="RemovePref(character.id)" *ngIf="!showButtonAdd">
+        Rimuovi
+      </button>
+
+      <button class="custom-btn" [routerLink]="['/single', character.id]" >
+        Profilo
+      </button>
+
+    </div>
+
+  </div>
+
+</div>

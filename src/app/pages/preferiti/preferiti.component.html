@@ -1,0 +1,16 @@
+<div class="row">
+
+ <div *ngIf="!Preferiti || Preferiti.length === 0" class="no-preferiti-box">
+    <h2>NON HAI ANCORA SCELTO NESSUN PREFERITO</h2>
+  </div>
+
+  <div *ngFor="let characte of Preferiti" class="col-12 col-md-6 col-lg-4 mb-4">
+    <app-card [character]="characte"   (TextMex)="showMex($event)"></app-card>
+  </div>
+</div>
+
+
+
+<div alert-danger mt-3 *ngIf="eliminateMex" class="custom-alert error">
+  {{eliminateMex}}
+</div>

@@ -1,0 +1,22 @@
+
+@import '../styles.scss';
+
+app-navbar{background-color:$second-color-bck ;}
+
+main{
+  background-color:$main-color-bck;
+  padding-top: 90px;
+}
+
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+#footer{background-color: $second-color-bck}

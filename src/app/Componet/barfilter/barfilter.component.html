@@ -1,0 +1,44 @@
+<div class="container my-3">
+  <div class="row g-2 align-items-end">
+
+    <!-- Name -->
+    <div class="col-12 col-md-3">
+      <input
+        type="text"
+        id="nameInput"
+        class="form-control"
+        [(ngModel)]="name"
+        placeholder="Nome character"
+      />
+    </div>
+
+    <!-- Status -->
+    <div class="col-12 col-md-3">
+      <select class="form-select" [(ngModel)]="status">
+        <option disabled [selected]="status === ''" value="">Status</option>
+        <option value="">All</option>
+        <option value="alive">Alive</option>
+        <option value="dead">Dead</option>
+        <option value="unknown">Unknown</option>
+      </select>
+    </div>
+
+    <!-- Gender -->
+    <div class="col-12 col-md-3">
+      <select class="form-select" [(ngModel)]="gender">
+        <option disabled [selected]="gender === ''" value="">Gender</option>
+        <option value="">All</option>
+        <option value="female">Female</option>
+        <option value="male">Male</option>
+        <option value="genderless">Genderless</option>
+        <option value="unknown">Unknown</option>
+      </select>
+    </div>
+
+    <!-- Button -->
+    <div class="col-12 col-md-3 justify-content-end mt-2 button-container">
+      <button class="btn custom-btn " (click)="inviaFiltri()">Applica Filtri</button>
+    </div>
+
+  </div>
+</div>
