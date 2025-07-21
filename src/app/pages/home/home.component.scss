@@ -26,7 +26,7 @@
 }
 
 .arrow-btn {
-  font-size: 2rem;
+  font-size: 2rem !important ;
   color: orange;
   background: none;
   border: none;
@@ -36,7 +36,6 @@
 
   &:hover:not(:disabled) {
     color: darkorange;
-    transform: scale(1.2);
   }
 
   &:disabled {
